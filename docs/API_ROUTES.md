@@ -1,3 +1,75 @@
+# API Routes in Next.js Todo App
+
+This document explains how API routes are implemented in the Next.js Todo application.
+
+## API Routes Structure
+
+```
+nextjs-todo-app/
+├── pages/
+│   └── api/
+│       └── todos.js    # Todo API endpoints
+```
+
+## Available Endpoints
+
+### GET /api/todos
+- Returns all todos
+- Response: Array of todo objects
+```javascript
+[
+  {
+    id: string,
+    text: string,
+    completed: boolean
+  }
+]
+```
+
+### POST /api/todos
+- Creates a new todo
+- Request body: `{ text: string }`
+- Response: Created todo object
+
+### PUT /api/todos/:id
+- Updates a todo
+- Request body: `{ completed: boolean }`
+- Response: Updated todo object
+
+### DELETE /api/todos/:id
+- Deletes a todo
+- Response: Deleted todo object
+
+## Usage Example
+
+```javascript
+// Fetching todos
+const fetchTodos = async () => {
+  const response = await fetch('/api/todos');
+  const data = await response.json();
+  return data;
+};
+
+// Creating a todo
+const createTodo = async (text) => {
+  const response = await fetch('/api/todos', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ text }),
+  });
+  return response.json();
+};
+```
+
+## Implementation Details
+
+1. API routes are serverless functions
+2. They handle data persistence
+3. They provide a RESTful interface for the frontend
+4. They can be extended to use a database in the future
+
 # Next.js API Routes Tutorial
 
 ## Understanding API Routes in Next.js

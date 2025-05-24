@@ -74,7 +74,7 @@ export default function Home() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          id: Number(id), 
+          id: id.toString(),
           completed: !currentStatus 
         }),
       });

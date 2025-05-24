@@ -24,7 +24,7 @@ A modern, responsive Todo application built with Next.js, featuring a clean UI, 
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd nextjs-learning
+cd nextjs-todo-app
 ```
 
 2. Install dependencies:
@@ -41,18 +41,15 @@ npm run dev
 yarn dev
 ```
 
-4. Open [http://localhost:3001](http://localhost:3001) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
 ```
-nextjs-learning/
+nextjs-todo-app/
 ├── pages/              # Next.js pages
 │   ├── index.js       # Main page with Todo list
-│   ├── about.js       # About page
-│   ├── blog.js        # Blog page
 │   └── api/           # API routes
-│       ├── hello.js   # Hello World API
 │       └── todos.js   # Todo CRUD operations
 ├── styles/            # CSS modules
 │   ├── Home.module.css
@@ -68,10 +65,6 @@ nextjs-learning/
 - `POST /api/todos` - Create a new todo
 - `PUT /api/todos` - Update a todo
 - `DELETE /api/todos?id=<id>` - Delete a todo
-
-### Hello World API
-
-- `GET /api/hello` - Returns a greeting message
 
 ## Features in Detail
 
@@ -130,18 +123,6 @@ The application uses CSS Modules for styling, with two main style files:
 - ESLint for code linting
 - Prettier for code formatting
 - CSS Modules for scoped styling
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
